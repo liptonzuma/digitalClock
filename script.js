@@ -16,6 +16,10 @@ const displayTime = ()=>{
     if(hr < 12){
         text="AM"
     }
+    if(min < 10){
+        min =`0${min}`;
+    }
+
    timeArea.textContent=`${hr} : ${min} : ${sec} ${text}`;
     setTimeout(displayTime,100)
 }
